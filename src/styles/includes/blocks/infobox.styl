@@ -1,0 +1,64 @@
+.infobox
+	// position relative
+	display grid
+	grid-template-columns 100%
+	gap 29px
+	padding 33px 25px 35px 30px
+	border-radius 20px
+	background #fff
+	overflow hidden
+	
+	&__title
+		// margin-bottom 32px
+		font-weight 600
+		font-size 28.57px
+		line-height 1.2621631
+	
+	&__text
+		line-height 1.467142857
+	
+	&--small
+		.infobox__title
+			font-size 18px
+			line-height 1.25722
+		
+		.infobox__text
+			line-height 1.627142857
+	
+	&--medium
+		grid-template-columns 1fr 240px
+		gap 16px 20px
+		padding 27px 0 35px 30px
+		
+		.infobox__img
+			grid-area 1 / 2 / 3 / 3
+	
+	&--large
+		// grid-template-columns 1fr 240px
+		grid-template-columns 1fr 150px
+		// grid-template-rows repeat(2, auto)
+		align-items end
+		gap 16px 20px
+		padding 36px 0 35px 45px
+		
+		.infobox__title
+			align-self start
+			font-size 70px
+			line-height 1.045
+		
+		.infobox__text
+			line-height 1.797142857
+		
+		.infobox__img
+			grid-area 1 / 2 / 3 / 3
+	
+	&--build-together
+		.infobox__img
+			margin-left -106px
+			margin-bottom -35px
+			max-width none
+	
+	&--partner
+		.infobox__img
+			margin -39px -54px
+			max-width none

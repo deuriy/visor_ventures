@@ -1,0 +1,16 @@
+.hero-section
+	// padding 26px 0 40px
+	padding 26px 0 100px
+	
+	&__items
+		display grid
+		grid-template-columns repeat(4, 1fr)
+		grid-template-rows 232px 238px
+		gap 30px
+	
+	&__item
+		&--two-col
+			grid-column span 2
+		
+		&--two-rows
+			grid-row span 2

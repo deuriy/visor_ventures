@@ -1,0 +1,40 @@
+.ico
+  display inline-flex
+  width 34px
+  height 34px
+  align-items center
+  justify-content center
+  padding 10px
+  background none
+  border 0
+  color inherit
+
+  &::before
+    background currentcolor
+    width 100%
+    height 100%
+    content ""
+    mask-size contain
+    mask-repeat no-repeat
+    mask-position center
+
+  &--phone
+    color #AFAFAF
+    
+    &::before
+      mask-image url("../img/icons/phone.svg")
+
+  &--email
+    color #AFAFAF
+    
+    &::before
+      mask-image url("../img/icons/email.svg")
+  
+  &--circle
+    border 1px solid #515151
+    border-radius 50%
+    @extend .transition
+    
+    &:hover
+      background #515151
+    

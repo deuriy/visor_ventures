@@ -1,0 +1,17 @@
+.main-menu
+	&__list
+		list-style none
+		display flex
+		gap 36px
+	
+	&__link
+		color #000
+		font-size 16px
+		text-decoration none
+		@extend .transition
+		
+		&:hover
+			color lighten(#000, 50%)
+		
+		&--active
+			font-weight 600
