@@ -1,0 +1,42 @@
+.client-box
+	display grid
+	grid-template-columns auto 1fr
+	gap 30px
+	align-items end
+	color #fff
+	text-decoration none
+	
+	&__title
+		font-weight 500
+		font-size 22px
+		line-height 1.045
+	
+	&__text-wrapper
+		position relative
+		// padding-right 34px
+		padding-right 45px
+		
+		&::after
+			content ""
+			position absolute
+			right 0
+			bottom 0
+			width 24px
+			height 25px
+			background url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 25'%3E%3Cpath stroke='%23fff' stroke-width='3' d='M2 23 22 2m0 0H2m20 0v21' opacity='.5'/%3E%3C/svg%3E") center no-repeat
+			@extend .transition
+	
+	&__title
+		margin-bottom 15px
+	
+	&__text
+		margin-bottom -5px
+		font-size 18px
+		line-height 1.5
+		opacity 0.699999988079071
+	
+	&:hover
+		.client-box__text-wrapper
+			&::after
+				right -20px
+				bottom 20px

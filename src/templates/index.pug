@@ -1,5 +1,147 @@
 extends layouts/base
 
 block content
-  .container
-    p Hello world!
+  .hero-section
+    .container
+      .hero-section__items
+        .infobox.infobox--large.infobox--build-together.hero-section__item.hero-section__item--two-col.hero-section__item--two-rows
+          h3.infobox__title Let's build #[span.red together]
+          .infobox__text
+            p Visor Ventures is based out of Dubai,#[br] at the crossroads of east and west.
+          img(src="/img/build_together.png" alt="").infobox__img
+        .infobox.infobox--medium.infobox--partner.hero-section__item.hero-section__item--two-col
+          h3.infobox__title We partner #[br]with extraordinary entrepreneurs
+          .infobox__text
+            p to shape the future #[br]through technology.
+          img(src="/img/extraordinary_entrepreneurs.png" alt="").infobox__img
+        .infobox.infobox--small.hero-section__item
+          h3.infobox__title We invest across multi stages and are in a distinctive position
+          .infobox__text
+            p to help propel businesses into the growth-stage and help them succeed.
+        a(href="#").more-link-box Find out more
+  .portfolio-slider-section
+    .container
+      .portfolio-slider-section__header
+        h2.portfolio-slider-section__title Portfolio
+        .portfolio-slider-section__swiper-buttons
+          button(type="button").arrow-button.arrow-button--prev.portfolio-slider-section__prev-btn
+          button(type="button").arrow-button.arrow-button--next.portfolio-slider-section__next-btn
+      .portfolio-swiper.swiper-container
+        .swiper-wrapper
+          .swiper-slide.portfolio-swiper__slide
+            .client-accordion-panel.client-accordion-panel--opened(data-slide-index="0")
+              a(href="#").client-accordion-panel__short
+                h3.client-accordion-panel__short-title Baffin Bay Networks
+              .client-accordion-panel__full
+                .client-accordion-panel__text-wrapper
+                  h3.client-accordion-panel__title Baffin Bay Networks
+                  .client-accordion-panel__note
+                    p Cloud-based security platform for network and application attacks prevention
+                  .client-accordion-panel__text
+                    p Baffin Bay Networks is a Swedish cyber security company poised to disrupt the cloud-based cyber security market.
+                  a(href="#").client-accordion-panel__more-link Learn More
+                .client-logo.client-logo--exited.client-accordion-panel__logo
+                  img(src="/img/clients/baffin_bay.png" alt="Baffin Bay Networks").client-logo__img
+          .swiper-slide.portfolio-swiper__slide
+            .client-accordion-panel(data-slide-index="1")
+              a(href="#").client-accordion-panel__short
+                h3.client-accordion-panel__short-title JackFinder
+              .client-accordion-panel__full
+                .client-accordion-panel__text-wrapper
+                  h3.client-accordion-panel__title JackFinder
+                  .client-accordion-panel__note
+                    p Cloud-based security platform for network and application attacks prevention
+                  .client-accordion-panel__text
+                    p Baffin Bay Networks is a Swedish cyber security company poised to disrupt the cloud-based cyber security market.
+                  a(href="#").client-accordion-panel__more-link Learn More
+                .client-logo.client-accordion-panel__logo
+                  img(src="/img/clients/jackfinder.png" alt="JackFinder").client-logo__img
+          .swiper-slide.portfolio-swiper__slide
+            .client-accordion-panel(data-slide-index="2")
+              a(href="#").client-accordion-panel__short
+                h3.client-accordion-panel__short-title Peddler
+              .client-accordion-panel__full
+                .client-accordion-panel__text-wrapper
+                  h3.client-accordion-panel__title Peddler
+                  .client-accordion-panel__note
+                    p Cloud-based security platform for network and application attacks prevention
+                  .client-accordion-panel__text
+                    p Baffin Bay Networks is a Swedish cyber security company poised to disrupt the cloud-based cyber security market.
+                  a(href="#").client-accordion-panel__more-link Learn More
+                .client-logo.client-accordion-panel__logo
+                  img(src="/img/clients/peddler.png" alt="Peddler").client-logo__img
+          .swiper-slide.portfolio-swiper__slide
+            .client-accordion-panel(data-slide-index="3")
+              a(href="#").client-accordion-panel__short
+                h3.client-accordion-panel__short-title Zilch
+              .client-accordion-panel__full
+                .client-accordion-panel__text-wrapper
+                  h3.client-accordion-panel__title Zilch
+                  .client-accordion-panel__note
+                    p Cloud-based security platform for network and application attacks prevention
+                  .client-accordion-panel__text
+                    p Baffin Bay Networks is a Swedish cyber security company poised to disrupt the cloud-based cyber security market.
+                  a(href="#").client-accordion-panel__more-link Learn More
+                .client-logo.client-accordion-panel__logo
+                  img(src="/img/clients/zilch.png" alt="Zilch").client-logo__img
+          .swiper-slide.portfolio-swiper__slide
+            .client-accordion-panel(data-slide-index="4")
+              a(href="#").client-accordion-panel__short
+                h3.client-accordion-panel__short-title 2021.ai
+              .client-accordion-panel__full
+                .client-accordion-panel__text-wrapper
+                  h3.client-accordion-panel__title 2021.ai
+                  .client-accordion-panel__note
+                    p Lorem Ipsum
+                  .client-accordion-panel__text
+                    p Lorem Ipsum
+                  a(href="#").client-accordion-panel__more-link Learn More
+                .client-logo.client-accordion-panel__logo
+                  img(src="/img/clients/2021_ai.png" alt="2021.ai").client-logo__img
+          .swiper-slide.portfolio-swiper__slide
+            .client-accordion-panel(data-slide-index="5")
+              a(href="#").client-accordion-panel__short
+                h3.client-accordion-panel__short-title 3S Money
+              .client-accordion-panel__full
+                .client-accordion-panel__text-wrapper
+                  h3.client-accordion-panel__title 3S Money
+                  .client-accordion-panel__note
+                    p Payments Technology
+                  .client-accordion-panel__text
+                    p Payments Technology
+                  a(href="#").client-accordion-panel__more-link Learn More
+                .client-logo.client-accordion-panel__logo
+                  img(src="/img/clients/3s_money.png" alt="3S Money").client-logo__img
+  .advantages-section
+    .container.advantages-section__container
+      h2.advantages-section__title Values
+      .advantages-section__items
+        .advantage-box.advantage-box--large.advantages-section__item
+          .advantage-box__number /01
+          h3.advantage-box__title We are entrepreneurs at heart
+          .advantage-box__text
+            p We have experience in building businesses from ground-up. We help founders by sharing our experiences and making their journey more enriching.
+        .advantage-box.advantages-section__item
+          .advantage-box__number /02
+          h3.advantage-box__title We think in decades
+          .advantage-box__text
+            p We invest for the long term. We believe building iconic businesses takes the best part of a decade or longer.
+        .advantage-box.advantages-section__item
+          .advantage-box__number /03
+          h3.advantage-box__title We are partners
+          .advantage-box__text
+            p We don't just write cheques but are partners to our portfolio companies. We ride the highs and lows with our portfolio companies.
+        .advantage-box.advantage-box--large.advantages-section__item
+          .advantage-box__number /04
+          h3.advantage-box__title We are transparent and fair
+          .advantage-box__text
+            p We believe that our reputation, as a firm and as individuals, is paramount. We honor our commitments and always act in the best interest of every stakeholder creating outcomes that are fair, just and honest.
+  .text-section
+    .container
+      h2.text-section__title Get Investment
+      .text-section__wrapper
+        .text-section__text-and-btn
+          .text-section__text
+            p We invest in every type of technology, #[br]unified by the biggest of the ambitions
+          a(href="#").btn-outline.text-section__btn Get Started
+        img(src="/img/text_section_img.png" alt="").text-section__img

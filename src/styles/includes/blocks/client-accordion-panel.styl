@@ -1,0 +1,62 @@
+.client-accordion-panel
+	max-width 780px
+	
+	&__short
+		display grid
+		grid-template-columns 100%
+		place-items center
+		width 100px
+		height 400px
+		border-radius 20px
+		background #202020
+		text-decoration none
+		@extend .transition
+		
+		&:hover
+			background lighten(#202020, 5)
+	
+	&__short-title
+		color #FFF
+		font-weight 600
+		font-size 20px
+		line-height 1.26246
+		opacity 0.699999988079071
+		transform rotate(-90deg)
+		
+	&__full
+		display none
+		grid-template-columns repeat(2, 1fr)
+		align-items end
+		gap 70px
+		color #FFF
+	
+	&__title
+		margin-bottom 6px
+		font-weight 600
+		font-size 28.567px
+		line-height 1.26246
+	
+	&__note
+		margin-bottom 20px
+		font-size 12px
+		line-height 1.59746
+		opacity 0.699999988079071
+	
+	&__text
+		margin-bottom 20px
+		font-size 13.804px
+		line-height 1.79746
+	
+	&__more-link
+		color #FFF
+		font-weight 600
+		
+		&:hover
+			text-decoration none
+	
+	&--opened
+		.client-accordion-panel__short
+			display none
+			
+		.client-accordion-panel__full
+			display grid

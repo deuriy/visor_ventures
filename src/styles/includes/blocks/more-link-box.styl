@@ -1,0 +1,36 @@
+.more-link-box
+	display grid
+	grid-template-columns 100%
+	grid-template-rows auto auto
+	// align-content space-between
+	align-items end
+	justify-items end
+	// padding 36px 33px 33px
+	padding 36px 36px 33px
+	border-radius 20px
+	background #88070A
+	color #FFF
+	font-weight 600
+	font-size 28px
+	line-height 1.450357
+	text-transform capitalize
+	text-decoration none
+	@extend .transition
+	
+	&::before
+		content ""
+		width 25px
+		height 24px
+		justify-self end
+		align-self start
+		margin-right -3px
+		background url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='25' fill='none' viewBox='0 0 24 25'%3E%3Cpath stroke='%23fff' stroke-width='3' d='M2 23 22 2m0 0H2m20 0v21'/%3E%3C/svg%3E") center no-repeat
+		@extend .transition
+	
+	&:hover
+		background darken(#88070A, 12%)
+		// background #5C090B
+		
+		&::before
+			margin-top -7px
+			margin-right -10px
