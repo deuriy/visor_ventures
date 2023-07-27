@@ -8,6 +8,14 @@ import Swiper, { Navigation } from 'swiper';
 // console.log($);
 
 $(() => {
+	$('.main-menu__link').each(function(index, link) {
+		let linkHref = $(link).attr('href');
+
+		if (window.location.pathname == linkHref) {
+			$(link).addClass('main-menu__link--active');
+		}
+	});
+
 	const portfolioSwiper = new Swiper('.portfolio-swiper', {
 	  // configure Swiper to use modules
 	  modules: [Navigation],

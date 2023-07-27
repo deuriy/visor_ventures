@@ -1,0 +1,36 @@
+.portfolio-section
+	padding 135px 0 131px
+	background #181818
+	
+	&__title
+		margin-bottom 40px
+		color #fff
+		font-weight 600
+		font-size 40px
+		line-height 1.045
+	
+	&__items
+		display grid
+		grid-template-columns repeat(2, 1fr)
+		border-top 1px solid rgba(255, 255, 255, 0.10000000149011612)
+	
+	&__item
+		position relative
+		padding-top 30px
+		padding-bottom 30px
+		border-bottom 1px solid rgba(255, 255, 255, 0.10000000149011612)
+		
+		&:nth-child(odd)
+			padding-right 55px
+			
+			&::after
+				content ""
+				position absolute
+				top 30px
+				right 0
+				bottom 30px
+				width 1px
+				background rgba(255, 255, 255, 0.10000000149011612)
+			
+		&:nth-child(even)
+			padding-left 55px
