@@ -1,0 +1,39 @@
+extends layouts/base
+
+block content
+  .contacts-section
+    .container.contacts-section__container
+      .contacts-section__text-wrapper
+        h1.page-title.contacts-section__title Get In #[span.red Touch]
+        .contacts-list
+          ul.contacts-list__items
+            li.contacts-list__item
+              h3.contacts-list__title Email Address
+              a(href="mailto:info@visorventures.com").contacts-list__link info@visorventures.com
+            li.contacts-list__item
+              h3.contacts-list__title Contact Number
+              a(href="tel:+971045715000").contacts-list__link + 971 (0) 4 571 5000
+      .contacts-section__form-wrapper
+        form(action="#").contact-form
+          h2.contact-form__title Contact Us
+          .contact-form__description
+            p For any enquiries, or just to say hello, get in touch and contact us.
+          .contact-form__items
+            .contact-form__item
+              label(for="first_name").form-label.contact-form__label First name
+              input(type="text" name="first_name" id="first_name").form-text.contact-form__form-text
+            .contact-form__item
+              label(for="last_name").form-label.contact-form__label Last name
+              input(type="text" name="last_name" id="last_name").form-text.contact-form__form-text
+            .contact-form__item
+              label(for="email_address").form-label.contact-form__label Email address
+              input(type="email" name="email_address" id="email_address").form-text.contact-form__form-text
+            .contact-form__item
+              label(for="phone_number").form-label.contact-form__label Phone number
+              input(type="tel" name="phone_number" id="phone_number").form-text.contact-form__form-text
+            .contact-form__item.contact-form__item--2col
+              label(for="message").form-label.contact-form__label Message
+              textarea(name="message" id="message").form-textarea.contact-form__form-textarea
+          .contact-form__actions
+            button(type="submit").btn-danger.contact-form__submit-btn Submit
+  include ./includes/blocks/text-section
