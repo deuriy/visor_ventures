@@ -1,15 +1,15 @@
 extends layouts/base
 
 block content
-  .about-us
-    .container.about-us__container
-      .about-us__text-wrapper
-        h1.about-us__title Our #[span.red Companies]
-        .about-us__text
+  .section-about
+    .container.section-about__container
+      .section-about__text-wrapper
+        h1.section-about__title Our #[span.red Companies]
+        .section-about__text
           p Our companies are united only by their ambition to tackle the world’s greatest problems, led by founders who are doing their life’s work.
           p We’ve joined their journeys at the earliest stages across industries and geographies. Meet the companies who inspire our work.
         a(href="#").btn-danger Find Out More
-      img(src="/img/about_us.png" alt="").about-us__img
+      img(src="/img/about_us.png" alt="").section-about__img
   .portfolio-section
     .container
       h2.portfolio-section__title Featured Portfolio
@@ -98,12 +98,4 @@ block content
             h3.client-box__title Your Company
             .client-box__text
               p Let's talk about your idea
-  .text-section.text-section--light-bg
-    .container
-      h2.text-section__title Get Investment
-      .text-section__wrapper
-        .text-section__text-and-btn
-          .text-section__text
-            p We invest in every type of technology, #[br]unified by the biggest of the ambitions
-          a(href="#").btn-danger.btn-danger--text-section.text-section__btn Get Started
-        img(src="/img/text_section_img.png" alt="").text-section__img
+  include ./includes/blocks/text-section-light

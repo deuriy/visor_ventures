@@ -1,0 +1,55 @@
+extends layouts/base
+
+block content
+  .section-about.section-about--how-we-work
+    .container.section-about__container
+      .section-about__text-wrapper
+        h1.section-about__title How We #[span.red Work]
+        .section-about__text
+          p Lorem ipsum dolor sit amet consectetur. Euismod malesuada lacus pharetra turpis enim enim dictum. Nec id massa convallis nisi nibh.
+        a(href="#").btn-danger Find Out More
+      img(src="/img/how_we_work.png" alt="").section-about__img
+  .steps-section
+    .container.steps-section__container
+      .steps-section__text-wrapper
+        h2.steps-section__title Our Investment Process
+        .steps-section__text
+          p Lorem ipsum dolor sit amet consectetur. Euismod malesuada lacus pharetra turpis enim enim dictum. Nec id massa convallis nisi nibh.
+      .steps
+        .steps__item
+          h4.steps__item-subtitle Step 1
+          .steps__item-wrapper
+            h3.steps__item-title Get in touch
+            .steps__item-text
+              p You might be introduced to us directly, or you share your initial pitch deck directly with us here. We’ll take a look at your deck and let you know what we thought within a week.
+        .steps__item
+          h4.steps__item-subtitle Step 2
+          .steps__item-wrapper
+            h3.steps__item-title Initial Conversation
+            .steps__item-text
+              p If we’d like to hear more, we will get in touch with you. The conversation will be about the team and understanding the product and opportunity in detail.
+        .steps__item
+          h4.steps__item-subtitle Step 3
+          .steps__item-wrapper
+            h3.steps__item-title We move forward
+            .steps__item-text
+              p Whether we are keen to move forward or not will be communicated quickly after the initial conversation. If we are moving forward we will need access to the data room to deep dive into the product, IP, metrics, scalability, traction, etc followed by a follow-up call.
+        .steps__item
+          h4.steps__item-subtitle Step 4
+          .steps__item-wrapper
+            h3.steps__item-title We make a decision
+            .steps__item-text
+              p You will hear back from us quickly with a ‘no’, a ‘yes’, or a request for more info to help us make a final decision. If we are not going to invest, we want to tell you no quickly and also tell you the key reasons that contributed to our choice.
+        .steps__item
+          h4.steps__item-subtitle Step 5
+          .steps__item-wrapper
+            h3.steps__item-title Time to execute a Term Sheet
+            .steps__item-text
+              p We work on a term sheet for you - we work from standard docs as much as we can to make it quick for you and minimise pain, time and lawyers in the future. If you accept the term sheet, we move forward with signing the subscription agreement and shareholders agreement.
+        .steps__item
+          h4.steps__item-subtitle Step 6
+          .steps__item-wrapper
+            h3.steps__item-title Let’s start the journey
+            .steps__item-text
+              p Once the documents are done we provide strategic support, connections and business advice among other benefits.
+  include ./includes/blocks/text-section-light

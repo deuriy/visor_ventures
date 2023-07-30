@@ -1,0 +1,52 @@
+.steps
+	position relative
+	color #FFF
+	
+	&::before
+		content ""
+		position absolute
+		top 9px
+		bottom 146px
+		left 128px
+		width 1px
+		// height 100%
+		opacity 0.10000000149011612
+		background #FFF
+	
+	&__item
+		display grid
+		grid-template-columns auto 1fr
+		align-items start
+		gap 30px
+		// min-height 154px
+		
+		& + .steps__item
+			// margin-top 62px
+			// margin-top 46px
+			margin-top 74px
+	
+	&__item-subtitle
+		// position relative
+		display grid
+		grid-template-columns 1fr auto
+		align-items center
+		gap 31px
+		font-weight 400
+		font-size 14px
+		line-height 1.5
+		text-transform uppercase
+		letter-spacing 3.22px
+		opacity 0.699999988079071
+		
+		&::after
+			content ""
+			width 77px
+			height 1px
+			background #FFF
+			// opacity 0.10000000149011612
+	
+	&__item-title
+		margin-bottom 20px
+		font-weight 600
+		font-size 20px
+		line-height 1.045
