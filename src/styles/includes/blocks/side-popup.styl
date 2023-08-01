@@ -1,0 +1,61 @@
+.side-popup
+	position fixed
+	inset 0
+	opacity 0
+	visibility hidden
+	@extend .transition
+	
+	&__overlay
+		content ""
+		position absolute
+		inset 0
+		background rgba(0, 0, 0, 0.24)
+		backdrop-filter blur(10px)
+	
+	&__inner
+		position absolute
+		top 0
+		right -100%
+		bottom 0
+		display grid
+		grid-template-columns 100%
+		grid-template-rows auto 1fr
+		width 731px
+		// @extend .transition
+		transition all .8s
+		
+	&__header
+		position relative
+		padding 40px 0
+		background #131313
+		color #fff
+		text-align center
+	
+	&__title
+		font-weight 600
+		font-size 40px
+		line-height 1.045
+		
+	&__close-btn
+		position absolute
+		top 3px
+		right 5px
+		width 40px
+		height 40px
+		background url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 12 12'%3E%3Cpath stroke='%23fff' d='m1 1 10.5 10.5m0-10.5L1 11.5'/%3E%3C/svg%3E") center / 11px no-repeat
+		@extend .transition
+		
+		&:hover
+			opacity 0.8
+	
+	&__body
+		padding 60px 80px 61px 80px
+		background #EEEFF4
+		overflow auto
+	
+	&--opened
+		opacity 1
+		visibility visible
+		
+		.side-popup__inner
+			right 0

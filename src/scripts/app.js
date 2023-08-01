@@ -1,7 +1,3 @@
-// import { Example } from "./modules/example.js";
-
-// new Example();
-
 import $ from "jquery";
 import Swiper, { Navigation } from 'swiper';
 
@@ -14,6 +10,23 @@ $(() => {
 		if (window.location.pathname == linkHref) {
 			$(link).addClass('main-menu__link--active');
 		}
+	});
+
+	$('[data-toggle-side-popup]').click(function(e) {
+		let sidePopupID = $(this).attr('href');
+		let $sidePopup = $(`${sidePopupID}`);
+
+		$sidePopup.toggleClass('side-popup--opened');
+
+		console.log($sidePopup);
+
+		e.preventDefault();
+	});
+
+	$('.side-popup__close-btn, .side-popup__overlay').click(function(e) {
+		$(this).closest('.side-popup').removeClass('side-popup--opened');
+
+		e.preventDefault();
 	});
 
 	const portfolioSwiper = new Swiper('.portfolio-swiper', {
