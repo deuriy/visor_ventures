@@ -1,0 +1,105 @@
+.text-section
+	overflow hidden
+	
+	@media $xs
+		padding-bottom 40px
+	
+	&__container
+		display grid
+		// grid-template-columns 1fr auto
+		// grid-template-columns 1fr 633px
+		grid-template-columns 1fr 675px
+		align-items center
+		// align-items start
+		// gap 20px
+		gap 10px
+		
+		@media $mdMinus
+			grid-template-columns 1fr 600px
+			
+		@media $smMinus
+			grid-template-columns 1fr 450px
+			
+		@media $xs
+			grid-template-columns 100%
+			gap 20px
+	
+	&__text-wrapper
+		margin-bottom 59px
+		
+		@media $mdMinus
+			margin-right -80px
+			margin-bottom 40px
+		
+		@media $xs
+			margin-right 0
+			margin-bottom 0
+		
+	&__title
+		margin-bottom 29px
+		font-weight 600
+		font-size 60px
+		line-height 1.045
+		
+		@media $mdMinus
+			margin-bottom 24px
+			font-size 48px
+		
+		@media $smMinus
+			margin-bottom 20px
+			font-size 42px
+		
+		@media $xs
+			font-size 36px
+	
+	&__text
+		margin-bottom 40px
+		line-height 1.79746
+		color #181818
+		
+		@media $smMinus
+			margin-bottom 30px
+		
+		@media $xs
+			margin-bottom 20px
+		
+		& > p + p
+			margin-top 12px
+	
+	&__btn
+		@media $xs
+			width 100%
+	
+	&__img
+		position relative
+		z-index -1
+		// max-width none
+		margin-bottom -98px
+		margin-left 41px
+		// margin -27px -83px -213px 0
+		pointer-events none
+		
+		@media $mdMinus
+			margin-bottom -80px
+			margin-left 0
+		
+		@media $smMinus
+			margin-bottom -50px
+		
+		@media $xs
+			order -1
+			width 420px
+			margin 0 auto
+			
+		@media $xxs
+			width 280px
+	
+	// &--how-we-work
+	// 	.text-section__title
+	// 		margin-bottom 19px
+		
+	// 	.text-section__text
+	// 		margin-bottom 30px
+			
+	// 	.text-section__img
+	// 		margin -96px -115px -209px -35px

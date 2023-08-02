@@ -6,10 +6,25 @@
 	color #fff
 	text-decoration none
 	
+	@media $smMinus
+		gap 20px
+	
+	@media $xs
+		gap 15px
+	
 	&__title
+		margin-bottom 15px
 		font-weight 500
 		font-size 22px
 		line-height 1.045
+		
+		@media $smMinus
+			margin-bottom 12px
+			font-size 20px
+		
+		@media $xs
+			margin-bottom 8px
+			font-size 18px
 	
 	&__text-wrapper
 		position relative
@@ -23,20 +38,41 @@
 			bottom 0
 			width 24px
 			height 25px
-			background url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 25'%3E%3Cpath stroke='%23fff' stroke-width='3' d='M2 23 22 2m0 0H2m20 0v21' opacity='.5'/%3E%3C/svg%3E") center no-repeat
-			@extend .transition
-	
-	&__title
-		margin-bottom 15px
+			background url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 25'%3E%3Cpath stroke='%23fff' stroke-width='3' d='M2 23 22 2m0 0H2m20 0v21' opacity='.5'/%3E%3C/svg%3E") center / contain no-repeat
+			transition all .6s
+			
+			@media $1440-
+				right 10px
+			
+			@media $xs
+				width 18px
+				height 18px
+				right 20px
 	
 	&__text
 		margin-bottom -5px
 		font-size 18px
 		line-height 1.5
 		opacity 0.699999988079071
+		
+		@media $mdMinus
+			font-size 16px
+		
+		@media $smMinus
+			margin-bottom -3px
+			font-size 15px
+		
+		@media $xs
+			font-size 14px
 	
 	&:hover
 		.client-box__text-wrapper
 			&::after
 				right -20px
 				bottom 20px
+				
+				@media $1440-
+					right -10px
+				
+				@media $xs
+					right 0

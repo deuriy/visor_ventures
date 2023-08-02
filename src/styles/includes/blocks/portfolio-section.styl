@@ -4,17 +4,48 @@
 	border-top-left-radius 16px
 	background #181818
 	
+	@media $mdMinus
+		padding 100px 0 116px
+	
+	@media $smMinus
+		padding 70px 0 86px
+	
+	@media $xs
+		padding 40px 0 56px
+	
+	@media $xxs
+		padding 30px 0 46px
+	
 	&__title
 		margin-bottom 40px
 		color #fff
 		font-weight 600
 		font-size 40px
 		line-height 1.045
+		
+		@media $mdMinus
+			margin-bottom 36px
+			font-size 36px
+		
+		@media $smMinus
+			margin-bottom 30px
+			font-size 32px
+		
+		@media $xs
+			margin-bottom 25px
+			font-size 28px
+		
+		@media $xxs
+			margin-bottom 20px
+			font-size 24px
 	
 	&__items
 		display grid
 		grid-template-columns repeat(2, 1fr)
 		border-top 1px solid rgba(255, 255, 255, 0.10000000149011612)
+		
+		@media $xs
+			grid-template-columns 100%
 	
 	&__item
 		position relative
@@ -22,8 +53,25 @@
 		padding-bottom 30px
 		border-bottom 1px solid rgba(255, 255, 255, 0.10000000149011612)
 		
+		@media $smMinus
+			padding-top 20px
+			padding-bottom 20px
+		
+		@media $xs
+			padding-top 15px
+			padding-bottom 15px
+		
 		&:nth-child(odd)
 			padding-right 55px
+			
+			@media $mdMinus
+				padding-right 40px
+			
+			@media $smMinus
+				padding-right 20px
+			
+			@media $xs
+				padding-right 0
 			
 			&::after
 				content ""
@@ -33,6 +81,18 @@
 				bottom 30px
 				width 1px
 				background rgba(255, 255, 255, 0.10000000149011612)
+				
+				@media $xs
+					display none
 			
 		&:nth-child(even)
 			padding-left 55px
+			
+			@media $mdMinus
+				padding-left 40px
+			
+			@media $smMinus
+				padding-left 20px
+			
+			@media $xs
+				padding-left 0
