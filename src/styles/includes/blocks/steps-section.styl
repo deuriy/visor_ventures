@@ -1,23 +1,62 @@
 .steps-section
-	padding 135px 0 144px
+	// padding 135px 0 144px
+	padding 135px 0 159px
 	// padding 135px 0 71px
 	border-top-right-radius 16px
 	border-top-left-radius 16px
 	background #181818 url('../img/hook.png') -8px 42% no-repeat
 	color #FFF
 	
+	@media $mdMinus
+		padding 100px 0 120px
+		background-size 200px
+		
+	@media $smMinus
+		padding 80px 0 100px
+		background-size 160px
+	
+	@media $xs
+		padding 50px 0 70px
+		background-image none
+	
+	@media $xxs
+		padding 30px 0 50px
+	
 	&__container
 		display grid
 		grid-template-columns 384px 1fr
 		gap 116px
+		
+		@media $mdMinus
+			gap 70px
+		
+		@media $smMinus
+			grid-template-columns 320px 1fr
+			gap 20px
+		
+		@media $xs
+			grid-template-columns 100%
 	
 	&__title
 		margin-bottom 26px
 		font-weight 600
 		font-size 40px
 		line-height 1.045
+		
+		@media $mdMinus
+			font-size 36px
+			
+		@media $smMinus
+			margin-bottom 20px
+			font-size 32px
+		
+		@media $xs
+			font-size 28px
 	
 	&__text
 		font-size 16px
 		line-height 1.79746
 		opacity 0.699999988079071
+		
+		@media $smMinus
+			font-size 14px

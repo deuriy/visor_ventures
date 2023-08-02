@@ -6,34 +6,34 @@
 	
 	&__container
 		display grid
-		// grid-template-columns 1fr auto
-		// grid-template-columns 1fr 633px
-		grid-template-columns 1fr 675px
+		grid-template-columns 1fr auto
+		// grid-template-columns 1fr 675px
 		align-items center
 		// align-items start
 		// gap 20px
 		gap 10px
 		
-		@media $mdMinus
-			grid-template-columns 1fr 600px
+		// @media $mdMinus
+		// 	grid-template-columns 1fr 600px
 			
-		@media $smMinus
-			grid-template-columns 1fr 450px
+		// @media $smMinus
+		// 	grid-template-columns 1fr 450px
 			
 		@media $xs
 			grid-template-columns 100%
 			gap 20px
 	
 	&__text-wrapper
+		width 488px
 		margin-bottom 59px
 		
 		@media $mdMinus
-			margin-right -80px
+			// margin-right -80px
 			margin-bottom 40px
 		
 		@media $xs
-			margin-right 0
-			margin-bottom 0
+			width auto
+			margin 0 auto
 		
 	&__title
 		margin-bottom 29px

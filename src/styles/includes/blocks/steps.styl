@@ -5,7 +5,7 @@
 	&::before
 		content ""
 		position absolute
-		top 9px
+		top 11px
 		// bottom 146px
 		bottom 73px
 		left 128px
@@ -13,25 +13,53 @@
 		// height 100%
 		opacity 0.10000000149011612
 		background #FFF
+		
+		@media $smMinus
+			left 118px
+		
+		@media $xs
+			left 105px
+		
+		@media $xxs
+			left 87px
 	
 	&__item
 		display grid
-		grid-template-columns auto 1fr
+		// grid-template-columns auto 1fr
+		grid-template-columns 167px 1fr
 		align-items start
-		gap 30px
+		gap 33px
 		// min-height 154px
+		
+		@media $smMinus
+			grid-template-columns 157px 1fr
+			gap 20px
+		
+		@media $xs
+			grid-template-columns 130px 1fr
+			
+		@media $xxs
+			grid-template-columns 100px 1fr
 		
 		& + .steps__item
 			// margin-top 62px
 			// margin-top 46px
 			margin-top 74px
+			
+			@media $smMinus
+				margin-top 50px
+			
+			@media $xs
+				margin-top 30px
 	
 	&__item-subtitle
 		// position relative
 		display grid
-		grid-template-columns 1fr auto
+		// grid-template-columns 1fr auto
+		grid-template-columns 1fr 77px
 		align-items center
-		gap 31px
+		// gap 31px
+		gap 10px
 		font-weight 400
 		font-size 14px
 		line-height 1.5
@@ -39,9 +67,17 @@
 		letter-spacing 3.22px
 		opacity 0.699999988079071
 		
+		@media $xs
+			grid-template-columns 1fr 50px
+			font-size 13px
+			
+		@media $xxs
+			grid-template-columns 1fr 25px
+		
 		&::after
 			content ""
-			width 77px
+			// width 77px
+			width auto
 			height 1px
 			background #FFF
 			// opacity 0.10000000149011612
@@ -51,3 +87,7 @@
 		font-weight 600
 		font-size 20px
 		line-height 1.045
+		
+		@media $xs
+			margin-bottom 16px
+			font-size 18px
