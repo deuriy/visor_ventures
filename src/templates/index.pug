@@ -1,7 +1,7 @@
 extends layouts/base
 
 block content
-  .infoblocks-section
+  section.infoblocks-section
     .container
       .infoblocks-section__items
         .infobox.infobox--large.infobox--build-together.infoblocks-section__item.infoblocks-section__item--two-col.infoblocks-section__item--two-rows
@@ -19,7 +19,7 @@ block content
           .infobox__text
             p to help propel businesses into the growth-stage and help them succeed.
         a(href="#").more-link-box Find out more
-  .portfolio-slider-section
+  section.portfolio-slider-section
     .container
       .portfolio-slider-section__header
         h2.portfolio-slider-section__title Portfolio
@@ -112,7 +112,7 @@ block content
                   a(href="#").client-accordion-panel__more-link Learn More
                 .client-logo.client-accordion-panel__logo
                   img(src="/img/clients/3s_money.png" alt="3S Money").client-logo__img
-  .advantages-section
+  section.advantages-section
     .container.advantages-section__container
       h2.advantages-section__title Values
       .advantages-section__items
@@ -136,4 +136,4 @@ block content
           h3.advantage-box__title We are transparent and fair
           .advantage-box__text
             p We believe that our reputation, as a firm and as individuals, is paramount. We honor our commitments and always act in the best interest of every stakeholder creating outcomes that are fair, just and honest.
-  include ./includes/blocks/text-section
+  include ./includes/blocks/banner

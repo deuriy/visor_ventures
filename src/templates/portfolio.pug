@@ -1,16 +1,16 @@
 extends layouts/base
 
 block content
-  .section-about
-    .container.section-about__container
-      .section-about__text-wrapper
-        h1.section-about__title Our #[span.red Companies]
-        .section-about__text
+  section.text-section
+    .container.text-section__container
+      .text-section__text-wrapper
+        h1.text-section__title Our #[span.red Companies]
+        .text-section__text
           p Our companies are united only by their ambition to tackle the world’s greatest problems, led by founders who are doing their life’s work.
           p We’ve joined their journeys at the earliest stages across industries and geographies. Meet the companies who inspire our work.
         a(href="#").btn-danger Find Out More
-      img(src="/img/about_us.png" alt="").section-about__img
-  .portfolio-section
+      img(src="/img/about_us.png" alt="").text-section__img
+  section.portfolio-section
     .container
       h2.portfolio-section__title Featured Portfolio
       .portfolio-section__items
@@ -98,4 +98,4 @@ block content
             h3.client-box__title Your Company
             .client-box__text
               p Let's talk about your idea
-  include ./includes/blocks/text-section-light
+  include ./includes/blocks/banner-light

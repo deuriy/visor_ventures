@@ -1,0 +1,49 @@
+.side-popup#get-investment-popup
+  .side-popup__overlay
+  .side-popup__inner
+    .side-popup__header
+      h2.side-popup__title Get Investment
+      a(href="#").side-popup__close-btn
+    .side-popup__body
+      form(action="#").investment-form
+        .investment-form__items
+          .investment-form__item
+            label(for="first_name").form-label.investment-form__label First name#[sup.red *]
+            input(type="text" name="first_name" id="first_name" required).form-text.investment-form__form-text
+          .investment-form__item
+            label(for="last_name").form-label.investment-form__label Last name#[sup.red *]
+            input(type="text" name="last_name" id="last_name" required).form-text.investment-form__form-text
+          .investment-form__item
+            label(for="company_name").form-label.investment-form__label Your company’s name#[sup.red *]
+            input(type="text" name="company_name" id="company_name" required).form-text.investment-form__form-text
+          .investment-form__item
+            label(for="website_link").form-label.investment-form__label A website link
+            input(type="text" name="website_link" id="website_link").form-text.investment-form__form-text
+          .investment-form__item
+            label(for="email_address").form-label.investment-form__label Email address#[sup.red *]
+            input(type="email" name="email_address" id="email_address" required).form-text.investment-form__form-text
+          .investment-form__item
+            label(for="company_location").form-label.investment-form__label Location of your company#[sup.red *]
+            input(type="text" name="company_location" id="company_location" required).form-text.investment-form__form-text
+          .investment-form__item.investment-form__item--2col
+            label(for="problem_solving").form-label.investment-form__label Let’s talk about your idea. What problem is your company solving?#[sup.red *]
+            textarea(name="problem_solving" id="problem_solving" required).form-textarea.investment-form__form-textarea
+          .investment-form__item.investment-form__item--2col
+            label(for="your_vision").form-label.investment-form__label What’s the vision you have for this company?#[sup.red *]
+            textarea(name="your_vision" id="your_vision" required).form-textarea.investment-form__form-textarea
+          .investment-form__item.investment-form__item--2col
+            label(for="your_progress").form-label.investment-form__label What traction / progress have you made so far towards this vision?#[sup.red *]
+            textarea(name="your_progress" id="your_progress" required).form-textarea.investment-form__form-textarea
+          .investment-form__item.investment-form__item--2col
+            label(for="about_you").form-label.investment-form__label What should we know about you and your team?#[sup.red *]
+            textarea(name="about_you" id="about_you" required).form-textarea.investment-form__form-textarea
+          .investment-form__item.investment-form__item--2col
+            label(for="linkedin_profile_url").form-label.investment-form__label Your LinkedIn Profile URL#[sup.red *]
+            input(type="text" name="linkedin_profile_url" id="linkedin_profile_url" required).form-text.investment-form__form-text
+          //- .investment-form__item.investment-form__item--2col
+          //-   label(for="additional_materials").form-label.investment-form__label If you have additional materials to help us make a better decision, please upload them here
+          //-   .upload-file
+          //-     input(type="file" name="additional_materials" id="additional_materials" multiple).upload-file__input
+          //-     label(for="additional_materials").upload-file__file-wrapper
+        .investment-form__actions
+          button(type="submit").btn-danger.investment-form__submit-btn Submit

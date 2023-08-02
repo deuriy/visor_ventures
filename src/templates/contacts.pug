@@ -1,7 +1,7 @@
 extends layouts/base
 
 block content
-  .contacts-section
+  section.contacts-section
     .container.contacts-section__container
       .contacts-section__text-wrapper
         h1.page-title.contacts-section__title Get In #[span.red Touch]
@@ -36,4 +36,4 @@ block content
               textarea(name="message" id="message").form-textarea.contact-form__form-textarea
           .contact-form__actions
             button(type="submit").btn-danger.contact-form__submit-btn Submit
-  include ./includes/blocks/text-section
+  include ./includes/blocks/banner
