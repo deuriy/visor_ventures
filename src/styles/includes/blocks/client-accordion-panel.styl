@@ -1,6 +1,12 @@
 .client-accordion-panel
 	max-width 780px
 	
+	@media $smMinus
+		max-width 730px
+		
+	@media $xs
+		max-width 380px
+	
 	&__short
 		display grid
 		grid-template-columns 100%
@@ -11,6 +17,9 @@
 		background #202020
 		text-decoration none
 		@extend .transition
+		
+		@media $xs
+			display none
 		
 		&:hover
 			background lighten(#202020, 5)
@@ -24,11 +33,21 @@
 		transform rotate(-90deg)
 		
 	&__full
-		display none
 		grid-template-columns repeat(2, 1fr)
 		align-items end
 		gap 70px
 		color #FFF
+		
+		@media $smPlus
+			display none			
+		
+		@media $smMinus
+			gap 50px
+		
+		@media $xs
+			display grid
+			grid-template-columns 100%
+			gap 35px
 	
 	&__title
 		margin-bottom 6px
@@ -53,6 +72,10 @@
 		
 		&:hover
 			text-decoration none
+	
+	&__logo
+		@media $xs
+			order -1
 	
 	&--opened
 		.client-accordion-panel__short

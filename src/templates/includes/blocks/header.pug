@@ -1,9 +1,14 @@
 header.header
 	.container.header__container
-		a(href="/" title="На главную").logo.header__logo
-			img(src="/img/logo.svg" alt="Logo").logo__img
-		.header__right
-			.main-menu
+		.header__left
+			a(href="#mobile-navigation-popup" data-toggle-side-popup).menu-hamburger.header__menu-hamburger.hidden-md
+				span.menu-hamburger__line
+				span.menu-hamburger__line
+				span.menu-hamburger__line
+			a(href="/" title="На главную").logo.header__logo
+				img(src="/img/logo.svg" alt="Logo").logo__img
+		.header__right.hidden-xxs
+			.main-menu.hidden-smMinus
 				ul.main-menu__list
 					li.main-menu__item
 						a(href="/").main-menu__link Home
@@ -13,4 +18,4 @@ header.header
 						a(href="/how_we_work.html").main-menu__link How We Work
 					li.main-menu__item
 						a(href="/contacts.html").main-menu__link Contact Us
-			a(href="#").btn-default Get investment
+			a(href="#get-investment-popup" data-toggle-side-popup).btn-default Get investment

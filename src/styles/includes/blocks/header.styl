@@ -2,14 +2,40 @@
 	padding 27px 0
 	
 	&__container,
+	&__left,
 	&__right
 		display grid
 		grid-template-columns repeat(2, auto)
 		align-items center
+	
+	&__left
+		gap 15px
+		
+		@media $xxs
+			justify-content space-between
+	
+	&__container,
+	&__right
 		gap 60px
+		
+		@media $mdMinus
+			gap 40px
+		
+		@media $xs
+			gap 20px
 	
 	&__container
 		justify-content space-between
+		
+		@media $xxs
+			grid-template-columns 100%
+	
+	&__right
+		@media $smMinus
+			grid-template-columns 100%
 	
 	&__logo
 		margin-top 5px
+		
+		@media $xxs
+			order -1

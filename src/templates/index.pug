@@ -1,35 +1,38 @@
 extends layouts/base
 
 block content
-  section.infoblocks-section
+  section.infoblocks-section.main__section
     .container
       .infoblocks-section__items
-        .infobox.infobox--large.infobox--build-together.infoblocks-section__item.infoblocks-section__item--two-col.infoblocks-section__item--two-rows
-          h3.infobox__title Let's build #[span.red together]
-          .infobox__text
-            p Visor Ventures is based out of Dubai,#[br] at the crossroads of east and west.
-          img(src="/img/build_together.png" alt="").infobox__img
-        .infobox.infobox--medium.infobox--partner.infoblocks-section__item.infoblocks-section__item--two-col
-          h3.infobox__title We partner #[br]with extraordinary entrepreneurs
-          .infobox__text
-            p to shape the future #[br]through technology.
-          img(src="/img/extraordinary_entrepreneurs.png" alt="").infobox__img
-        .infobox.infobox--small.infoblocks-section__item
-          h3.infobox__title We invest across multi stages and are in a distinctive position
-          .infobox__text
-            p to help propel businesses into the growth-stage and help them succeed.
+        .infoblock.infoblock--large.infoblocks-section__item.infoblocks-section__item--two-col.infoblocks-section__item--two-rows
+          .infoblock__text-wrapper
+            h3.infoblock__title Let's build #[span.red together]
+            .infoblock__text
+              p Visor Ventures is based out of Dubai, at the crossroads of east and west.
+          img(src="/img/build_together.png" alt="").infoblock__img
+        .infoblock.infoblock--medium.infoblocks-section__item.infoblocks-section__item--two-col
+          .infoblock__text-wrapper
+            h3.infoblock__title We partner with extraordinary entrepreneurs
+            .infoblock__text
+              p to shape the future through technology.
+          img(src="/img/extraordinary_entrepreneurs.png" alt="").infoblock__img
+        .infoblock.infoblock--small.infoblocks-section__item
+          .infoblock__text-wrapper
+            h3.infoblock__title We invest across multi stages and are in a distinctive position
+            .infoblock__text
+              p to help propel businesses into the growth-stage and help them succeed.
         a(href="#").more-link-box Find out more
-  section.portfolio-slider-section
+  section.portfolio-slider-section.main__section
     .container
       .portfolio-slider-section__header
         h2.portfolio-slider-section__title Portfolio
         .portfolio-slider-section__swiper-buttons
           button(type="button").arrow-button.arrow-button--prev.portfolio-slider-section__prev-btn
           button(type="button").arrow-button.arrow-button--next.portfolio-slider-section__next-btn
-      .portfolio-swiper.swiper-container
-        .swiper-wrapper
-          .swiper-slide.portfolio-swiper__slide
-            .client-accordion-panel.client-accordion-panel--opened(data-slide-index="0")
+      .portfolio-slider.swiper-container
+        .swiper-wrapper.portfolio-slider__slides
+          .swiper-slide.portfolio-slider__slide
+            .client-accordion-panel.client-accordion-panel--opened.portfolio-slider__accordion-panel(data-slide-index="0")
               a(href="#").client-accordion-panel__short
                 h3.client-accordion-panel__short-title Baffin Bay Networks
               .client-accordion-panel__full
@@ -42,8 +45,8 @@ block content
                   a(href="#").client-accordion-panel__more-link Learn More
                 .client-logo.client-logo--exited.client-accordion-panel__logo
                   img(src="/img/clients/baffin_bay.png" alt="Baffin Bay Networks").client-logo__img
-          .swiper-slide.portfolio-swiper__slide
-            .client-accordion-panel(data-slide-index="1")
+          .swiper-slide.portfolio-slider__slide
+            .client-accordion-panel.portfolio-slider__accordion-panel(data-slide-index="1")
               a(href="#").client-accordion-panel__short
                 h3.client-accordion-panel__short-title JackFinder
               .client-accordion-panel__full
@@ -56,8 +59,8 @@ block content
                   a(href="#").client-accordion-panel__more-link Learn More
                 .client-logo.client-accordion-panel__logo
                   img(src="/img/clients/jackfinder.png" alt="JackFinder").client-logo__img
-          .swiper-slide.portfolio-swiper__slide
-            .client-accordion-panel(data-slide-index="2")
+          .swiper-slide.portfolio-slider__slide
+            .client-accordion-panel.portfolio-slider__accordion-panel(data-slide-index="2")
               a(href="#").client-accordion-panel__short
                 h3.client-accordion-panel__short-title Peddler
               .client-accordion-panel__full
@@ -70,8 +73,8 @@ block content
                   a(href="#").client-accordion-panel__more-link Learn More
                 .client-logo.client-accordion-panel__logo
                   img(src="/img/clients/peddler.png" alt="Peddler").client-logo__img
-          .swiper-slide.portfolio-swiper__slide
-            .client-accordion-panel(data-slide-index="3")
+          .swiper-slide.portfolio-slider__slide
+            .client-accordion-panel.portfolio-slider__accordion-panel(data-slide-index="3")
               a(href="#").client-accordion-panel__short
                 h3.client-accordion-panel__short-title Zilch
               .client-accordion-panel__full
@@ -84,8 +87,8 @@ block content
                   a(href="#").client-accordion-panel__more-link Learn More
                 .client-logo.client-accordion-panel__logo
                   img(src="/img/clients/zilch.png" alt="Zilch").client-logo__img
-          .swiper-slide.portfolio-swiper__slide
-            .client-accordion-panel(data-slide-index="4")
+          .swiper-slide.portfolio-slider__slide
+            .client-accordion-panel.portfolio-slider__accordion-panel(data-slide-index="4")
               a(href="#").client-accordion-panel__short
                 h3.client-accordion-panel__short-title 2021.ai
               .client-accordion-panel__full
@@ -98,8 +101,8 @@ block content
                   a(href="#").client-accordion-panel__more-link Learn More
                 .client-logo.client-accordion-panel__logo
                   img(src="/img/clients/2021_ai.png" alt="2021.ai").client-logo__img
-          .swiper-slide.portfolio-swiper__slide
-            .client-accordion-panel(data-slide-index="5")
+          .swiper-slide.portfolio-slider__slide
+            .client-accordion-panel.portfolio-slider__accordion-panel(data-slide-index="5")
               a(href="#").client-accordion-panel__short
                 h3.client-accordion-panel__short-title 3S Money
               .client-accordion-panel__full
@@ -112,7 +115,7 @@ block content
                   a(href="#").client-accordion-panel__more-link Learn More
                 .client-logo.client-accordion-panel__logo
                   img(src="/img/clients/3s_money.png" alt="3S Money").client-logo__img
-  section.advantages-section
+  section.advantages-section.main__section
     .container.advantages-section__container
       h2.advantages-section__title Values
       .advantages-section__items

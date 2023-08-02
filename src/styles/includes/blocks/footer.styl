@@ -1,10 +1,17 @@
 .footer
+	margin-top -16px
 	color #FFF
 	
 	&__container
 		display grid
 		grid-template-columns repeat(2, auto)
 		justify-content space-between
+		align-items start
+		gap 20px
+		
+		@media $xs
+			grid-template-columns 100%
+			gap 15px
 	
 	&__top
 		// padding 64px 0
@@ -12,6 +19,15 @@
 		border-top-right-radius 16px
 		border-top-left-radius 16px
 		background #181818
+		
+		@media $mdMinus
+			padding 50px 0 60px
+		
+		@media $smMinus
+			padding 35px 0
+			
+		@media $xs
+			padding 20px 0
 	
 	&__bottom
 		padding 8px 0
@@ -24,7 +40,8 @@
 			text-decoration none
 	
 	&__contacts
-		margin-top 7px
+		@media $smPlus
+			margin-top 7px
 	
 	&__copyright
 		font-weight 600

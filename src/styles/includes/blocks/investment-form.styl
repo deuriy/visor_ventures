@@ -1,8 +1,14 @@
 .investment-form
+	width 571px
+	max-width 100%
+	
 	&__items
 		display grid
 		grid-template-columns repeat(2, 1fr)
 		gap 35px 30px
+		
+		@media $xs
+			gap 25px 20px
 	
 	&__item
 		&--2col

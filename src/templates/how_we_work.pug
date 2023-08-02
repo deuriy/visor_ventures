@@ -1,7 +1,7 @@
 extends layouts/base
 
 block content
-  section.text-section.text-section--how-we-work
+  section.text-section.text-section--how-we-work.main__section
     .container.text-section__container
       .text-section__text-wrapper
         h1.text-section__title How We #[span.red Work]
@@ -9,7 +9,7 @@ block content
           p Lorem ipsum dolor sit amet consectetur. Euismod malesuada lacus pharetra turpis enim enim dictum. Nec id massa convallis nisi nibh.
         a(href="#get-investment-popup" data-toggle-side-popup).btn-danger Find Out More
       img(src="/img/how_we_work.png" alt="").text-section__img
-  section.steps-section
+  section.steps-section.main__section
     .container.steps-section__container
       .steps-section__text-wrapper
         h2.steps-section__title Our Investment Process
@@ -53,4 +53,3 @@ block content
             .steps__item-text
               p Once the documents are done we provide strategic support, connections and business advice among other benefits.
   include ./includes/blocks/banner-light
-  include ./includes/blocks/get-investment-popup

@@ -1,11 +1,11 @@
 .side-popup#get-investment-popup
   .side-popup__overlay
   .side-popup__inner
+    a(href="#").side-popup__close-btn
     .side-popup__header
       h2.side-popup__title Get Investment
-      a(href="#").side-popup__close-btn
     .side-popup__body
-      form(action="#").investment-form
+      form(action="#").investment-form.side-popup__investment-form
         .investment-form__items
           .investment-form__item
             label(for="first_name").form-label.investment-form__label First name#[sup.red *]

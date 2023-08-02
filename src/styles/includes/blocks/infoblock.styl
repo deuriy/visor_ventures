@@ -1,0 +1,127 @@
+.infoblock
+	display grid
+	grid-template-columns 100%
+	border-radius 20px
+	background #fff
+	overflow hidden
+	
+	.infoblock__text-wrapper,
+	.infoblock__img
+		// @media $xxsPlus
+		grid-area 1 / 1 / 2 / 2
+	
+	&__text-wrapper
+		display grid
+		grid-template-columns 100%
+		align-content space-between
+		gap 29px
+		max-width 100%
+		padding 33px 25px 35px 30px
+		
+		@media $mdMinus
+			gap 25px
+			padding 20px
+		
+		@media $xxs
+			gap 15px
+	
+	&__title
+		font-weight 600
+		font-size 28.57px
+		line-height 1.2621631
+		
+		@media $smMinus
+			font-size 24px
+		
+		@media $xxs
+			font-size 20px
+	
+	&__text
+		width 270px
+		max-width 100%
+		line-height 1.467142857
+		
+		@media $xxs
+			width auto
+	
+	&__img
+		justify-self end
+		align-self end
+		
+		// @media $xxs
+		// 	justify-self center
+	
+	&--small
+		.infoblock__title
+			font-size 18px
+			line-height 1.25722
+		
+		.infoblock__text
+			line-height 1.627142857
+	
+	&--medium
+		.infoblock__text-wrapper
+			gap 20px
+			width 340px
+			padding 27px 30px 35px
+			
+			@media $mdMinus
+				width 330px
+				padding 20px 25px
+			
+			@media $xxs
+				width 240px
+				padding 20px
+		
+		.infoblock__img
+			margin-right 44px
+			
+			@media $mdMinus
+				width 140px
+				margin-right 20px
+			
+			@media $xxs
+				width 90px
+				margin-right 10px
+	
+	&--large		
+		.infoblock__text-wrapper
+			width 450px
+			gap 16px 20px
+			z-index 1
+			padding 35px 45px
+			
+			@media $mdMinus
+				width 420px
+				padding 25px 30px
+			
+			@media $xxs
+				padding 20px
+			
+			@media $xxs
+				width 260px
+		
+		.infoblock__title
+			align-self start
+			font-size 70px
+			line-height 1.045
+			
+			@media $smMinus
+				font-size 60px
+				
+			@media $xxs
+				font-size 36px
+		
+		.infoblock__text
+			line-height 1.797142857
+		
+		.infoblock__img
+			@media $mdMinus
+				width 180px
+			
+			@media $smMinus
+				width 150px
+			
+			@media $xxs
+				justify-self end
+				width 80px
