@@ -5,7 +5,10 @@
 		max-width 730px
 		
 	@media $xs
-		max-width 380px
+		max-width 340px
+		
+	@media $xxs
+		max-width 260px
 	
 	&__short
 		display grid
@@ -47,13 +50,19 @@
 		@media $xs
 			display grid
 			grid-template-columns 100%
-			gap 35px
+			gap 30px
+		
+		@media $xxs
+			gap 20px
 	
 	&__title
 		margin-bottom 6px
 		font-weight 600
 		font-size 28.567px
 		line-height 1.26246
+		
+		@media $xs
+			font-size 24px
 	
 	&__note
 		margin-bottom 20px
