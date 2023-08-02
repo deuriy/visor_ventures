@@ -5,27 +5,72 @@
 	border-radius 20px
 	background #fff
 	
+	@media $mdMinus
+		width 580px
+		padding 40px 50px
+	
+	@media $smMinus
+		width 460px
+		padding 30px 40px
+	
+	@media $xs
+		width auto
+		padding 30px 35px
+		border-radius 16px
+	
+	@media $xxs
+		padding 20px 25px
+	
 	&__title
 		margin-bottom 10px
 		font-weight 600
 		font-size 40px
 		line-height 1.045
 		color #262626
+		
+		@media $mdMinus
+			font-size 36px
+			
+		@media $smMinus
+			font-size 32px
+			
+		@media $xs
+			font-size 28px
 	
 	&__description
 		margin-bottom 40px
 		font-size 16px
 		line-height 1.59746
 		color #181818
+		
+		@media $mdMinus
+			margin-bottom 35px
+		
+		@media $smMinus
+			margin-bottom 25px
+			font-size 15px
+		
+		@media $xs
+			margin-bottom 20px
 	
 	&__items
 		display grid
 		grid-template-columns repeat(2, 1fr)
 		gap 37px 49px
+		
+		@media $mdMinus
+			gap 30px 40px
+			
+		@media $smMinus
+			gap 30px
+		
+		@media $xxs
+			grid-template-columns 100%
 	
 	&__item
 		&--2col
-			grid-column span 2
+			@media $xxsPlus
+				grid-column span 2
 	
 	&__label
 		margin-bottom 7px
@@ -34,3 +79,6 @@
 		display grid
 		grid-template-columns 100%
 		margin-top 40px
+		
+		@media $smMinus
+			margin-top 30px

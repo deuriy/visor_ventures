@@ -52,18 +52,27 @@
 	&__body
 		// padding 60px 80px 61px 80px
 		// padding 60px 80px
-		padding 40px
+		padding 60px 80px
 		background #EEEFF4
 		overflow auto
 		
-		@media $xs
-			padding 20px
-	
-	&__investment-form
-		margin 20px 40px
+		@media $mdMinus
+			padding 50px 60px
+			
+		@media $smMinus
+			padding 40px
 		
 		@media $xs
-			margin 15px
+			padding 30px
+		
+		@media $xxs
+			padding 20px
+	
+	// &__investment-form
+	// 	margin 20px 40px
+		
+	// 	@media $xs
+	// 		margin 15px
 	
 	&__menu-wrapper
 		display grid

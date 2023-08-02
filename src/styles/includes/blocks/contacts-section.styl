@@ -2,13 +2,48 @@
 	padding 27px 0 119px
 	background url('../img/contacts_section_img.png') left -8px bottom 7px no-repeat
 	
+	@media $mdMinus
+		padding-bottom 90px
+		background-size 320px
+		
+	@media $smMinus
+		padding-top 20px
+		padding-bottom 70px
+		background-size 260px
+		
+	@media $xs
+		padding-bottom 50px
+		background-image none
+	
+	@media $xxs
+		padding-bottom 30px
+	
 	&__container
 		display grid
 		grid-template-columns repeat(2, 1fr)
 		gap 20px
+		
+		@media $xs
+			grid-template-columns 100%
+			gap 30px
 	
 	&__text-wrapper
 		margin-top 34px
+		
+		@media $smMinus
+			margin-top 22px
+		
+		@media $xs
+			margin-top 0
 	
 	&__title
 		margin-bottom 39px
+		
+		@media $mdMinus
+			margin-bottom 30px
+		
+		@media $smMinus
+			margin-bottom 24px
+			
+		@media $xs
+			margin-bottom 18px

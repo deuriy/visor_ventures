@@ -9,10 +9,15 @@
 		
 		@media $xs
 			gap 25px 20px
+		
+		@media $xxs
+			grid-template-columns 100%
+			gap 20px
 	
 	&__item
 		&--2col
-			grid-column span 2
+			@media $xxsPlus
+				grid-column span 2
 	
 	&__label
 		margin-bottom 10px

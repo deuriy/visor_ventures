@@ -4,6 +4,15 @@
 		display grid
 		grid-template-columns 100%
 		gap 30px
+		
+		@media $mdMinus
+			gap 25px
+			
+		@media $smMinus
+			gap 20px
+			
+		@media $xs
+			gap 15px
 	
 	&__item,
 	&__link
@@ -12,6 +21,12 @@
 	&__link
 		font-size 18px
 		text-decoration none
+		
+		@media $xs
+			font-size 17px
+			
+		@media $xxs
+			font-size 16px
 	
 	&__title
 		margin-bottom 2px
