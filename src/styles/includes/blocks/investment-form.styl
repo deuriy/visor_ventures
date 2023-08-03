@@ -15,6 +15,11 @@
 			gap 20px
 	
 	&__item
+		.wpcf7-not-valid-tip
+			margin-top 10px
+			font-weight 500
+			color #A70B0B
+			
 		&--2col
 			@media $xxsPlus
 				grid-column span 2
@@ -23,6 +28,27 @@
 		margin-bottom 10px
 		
 	&__actions
+		position relative
 		display grid
 		grid-template-columns 100%
 		margin-top 50px
+		
+		.wpcf7-spinner
+			position absolute
+			top 0
+			right 0
+			bottom 0
+			margin auto 17px
+			background #FFF
+			
+			&::before
+				background #000
+	
+	&.wpcf7-form
+		.wpcf7-response-output
+			margin 2em 0 1em
+			padding 0.8em 1em
+		
+		&.invalid
+			.wpcf7-response-output
+				border-color #A70B0B

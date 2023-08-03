@@ -4,25 +4,24 @@ import Swiper, { Navigation } from 'swiper';
 // console.log($);
 
 $(() => {
-	$('.main-menu__link').each(function(index, link) {
-		let linkHref = $(link).attr('href');
+	// $('.main-menu__link').each(function(index, link) {
+	// 	let linkHref = $(link).attr('href');
 
-		if (window.location.pathname == linkHref) {
-			$(link).addClass('main-menu__link--active');
-		}
-	});
+	// 	if (window.location.pathname == linkHref) {
+	// 		$(link).addClass('main-menu__link--active');
+	// 	}
+	// });
 
 	$('[data-toggle-side-popup]').click(function(e) {
+		e.preventDefault();
+
 		let sidePopupID = $(this).attr('href');
 		let $sidePopup = $(`${sidePopupID}`);
 
+		if (!$sidePopup.length) return;
+
 		$sidePopup.toggleClass('side-popup--opened');
-
 		$(document.body).css('overflow', 'hidden');
-
-		// console.log($sidePopup);
-
-		e.preventDefault();
 	});
 
 	$('.side-popup__close-btn, .side-popup__overlay').click(function(e) {
