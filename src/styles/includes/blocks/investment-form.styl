@@ -27,6 +27,9 @@
 	&__label
 		margin-bottom 10px
 		
+		&--upload-file
+			margin-bottom 17px
+		
 	&__actions
 		position relative
 		display grid
@@ -44,9 +47,13 @@
 			&::before
 				background #000
 	
+	&__submit-btn
+		@media $xs
+			min-height 55px
+	
 	&.wpcf7-form
 		.wpcf7-response-output
-			margin 2em 0 1em
+			margin 1.7em 0 0
 			padding 0.8em 1em
 		
 		&.invalid

@@ -1,14 +1,13 @@
 .client-accordion-panel
-	max-width 780px
+	display grid
+	grid-template-columns auto auto
+	overflow hidden
 	
 	@media $smMinus
-		max-width 730px
-		
+		grid-template-columns 100%
+	
 	@media $xs
-		max-width 340px
-		
-	@media $xxs
-		max-width 260px
+		grid-template-columns 100%
 	
 	&__short
 		display grid
@@ -19,7 +18,11 @@
 		border-radius 20px
 		background #202020
 		text-decoration none
-		@extend .transition
+		overflow hidden
+		transition background .3s
+		
+		@media $mdMinus
+			height 100%
 		
 		@media $xs
 			display none
@@ -32,25 +35,39 @@
 		font-weight 600
 		font-size 20px
 		line-height 1.26246
+		text-align center
 		opacity 0.699999988079071
 		transform rotate(-90deg)
 		
 	&__full
-		grid-template-columns repeat(2, 1fr)
+		display grid
+		grid-template-columns 330px 380px
 		align-items end
 		gap 70px
 		color #FFF
+		overflow hidden
+		transition all .7s
 		
-		@media $smPlus
-			display none			
+		@media $md
+			width 0
+		
+		@media $mdMinus
+			grid-template-columns 240px 290px
+			gap 30px
 		
 		@media $smMinus
+			grid-template-columns 1fr 290px
 			gap 50px
+			width 680px
+			max-width 100%
+			margin-right auto
+			margin-left auto
 		
 		@media $xs
 			display grid
 			grid-template-columns 100%
 			gap 30px
+			width 290px
 		
 		@media $xxs
 			gap 20px
@@ -71,6 +88,12 @@
 		opacity 0.699999988079071
 	
 	&__text
+		display -webkit-box
+		text-overflow ellipsis
+		-webkit-line-clamp 6
+		-webkit-box-orient vertical
+		word-wrap break-word
+		overflow hidden
 		margin-bottom 20px
 		font-size 13.804px
 		line-height 1.79746
@@ -87,8 +110,24 @@
 			order -1
 	
 	&--opened
+		// position relative
+		
 		.client-accordion-panel__short
-			display none
+			width 0
 			
 		.client-accordion-panel__full
-			display grid
+			// position absolute
+			// top 0
+			// right 0
+			// bottom 0
+			justify-content end
+			width 780px
+			
+			@media $mdMinus
+				width 560px
+			
+			@media $smMinus
+				width 680px
+			
+			@media $xs
+				width 290px

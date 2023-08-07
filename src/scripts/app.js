@@ -1,17 +1,7 @@
 import $ from "jquery";
 import Swiper, { Navigation } from 'swiper';
 
-// console.log($);
-
 $(() => {
-	// $('.main-menu__link').each(function(index, link) {
-	// 	let linkHref = $(link).attr('href');
-
-	// 	if (window.location.pathname == linkHref) {
-	// 		$(link).addClass('main-menu__link--active');
-	// 	}
-	// });
-
 	$('[data-toggle-side-popup]').click(function(e) {
 		e.preventDefault();
 
@@ -32,57 +22,69 @@ $(() => {
 		e.preventDefault();
 	});
 
-	const portfolioSlider = new Swiper('.portfolio-slider', {
-	  // configure Swiper to use modules
+	// File input styling
+	$('.upload-file__input').each(function(index, el) {
+		let $fileBtn = $(el).next().find('.upload-file__btn');
+
+    $(this).on('change', function (e) {
+      let countFiles = '';
+      if (this.files && this.files.length >= 1)
+        countFiles = this.files.length;
+
+      if (countFiles)
+        $fileBtn.text('Selected files: ' + countFiles);
+      else
+        $fileBtn.text('Upload Files');;
+    });
+	});
+
+	const portfolioSliderMobile = new Swiper('.portfolio-slider--mobile', {
+	  allowTouchMove: false,
 	  modules: [Navigation],
 	  slidesPerView: 1,
-
-	  breakpoints: {
-      768: {
-        slidesPerView: 'auto',
-	  		spaceBetween: 30,
-      }
-    }
+	  spaceBetween: 30,
+	  loop: true
 	});
-
-	portfolioSlider.on('slideChange', function () {
-	  console.log('slide changed');
-	});
-
-	// portfolioSlider.slideNext();
 
 	$('.client-accordion-panel__short').click(function(e) {
 		let $accordionPanel = $(this).closest('.client-accordion-panel');
-		let $portfolioSlider = $accordionPanel.closest('.portfolio-slider');
-		let slideIndex = $accordionPanel.data('slide-index');
-		let $otherAccordionPanels = $portfolioSlider.find(`.client-accordion-panel`).not(`[data-slide-index="${slideIndex}"]`);
+		let $accordionPanelsContainer = $accordionPanel.closest('.client-accordion-panels');
+		let $prevAccordionPanels = $accordionPanel.prevAll(`.client-accordion-panel`);
 
-		console.log($accordionPanel);
-		console.log($otherAccordionPanels);
-
-		// $accordionPanel.siblings('.client-accordion-panel').removeClass('client-accordion-panel--opened');
-		$otherAccordionPanels.removeClass('client-accordion-panel--opened');
+		$prevAccordionPanels.removeClass('client-accordion-panel--opened');
 		$accordionPanel.addClass('client-accordion-panel--opened');
-		portfolioSlider.slideTo(slideIndex);
+		$accordionPanelsContainer.append($prevAccordionPanels);
 
 		e.preventDefault();
 	});
 
-	$('.portfolio-slider-section__prev-btn').click(function(event) {
-		portfolioSlider.slidePrev();
+	$('.portfolio-slider-section__prev-btn--desktop').click(function(event) {
+		let $currentPortfolioSection = $(this).closest('.portfolio-slider-section');
+		let $accordionPanelsContainer = $currentPortfolioSection.find('.client-accordion-panels');
+		let $activeVisiblePanelItem = $currentPortfolioSection.find('.client-accordion-panels .client-accordion-panels__item:first-child');
+		let $prevPanelItem = $currentPortfolioSection.find('.client-accordion-panels .client-accordion-panels__item:last-child');
 
-		// setTimeout(() => {
-		// 	console.log(portfolioSlider.activeIndex);
-		// 	console.log(portfolioSlider.previousIndex);
-		// })
+		$activeVisiblePanelItem.removeClass('client-accordion-panel--opened');
+		$prevPanelItem.addClass('client-accordion-panel--opened');
+		$accordionPanelsContainer.prepend($prevPanelItem);
 	});
 
-	$('.portfolio-slider-section__next-btn').click(function(event) {
-		portfolioSlider.slideNext();
+	$('.portfolio-slider-section__next-btn--desktop').click(function(event) {
+		let $currentPortfolioSection = $(this).closest('.portfolio-slider-section');
+		let $accordionPanelsContainer = $currentPortfolioSection.find('.client-accordion-panels');
+		let $activeVisiblePanelItem = $currentPortfolioSection.find('.client-accordion-panels .client-accordion-panels__item:first-child');
+		let $nextPanelItem = $activeVisiblePanelItem.next();
 
-		// setTimeout(() => {
-		// 	console.log(portfolioSlider.activeIndex);
-		// 	console.log(portfolioSlider.previousIndex);
-		// })
+		$activeVisiblePanelItem.removeClass('client-accordion-panel--opened');
+		$nextPanelItem.addClass('client-accordion-panel--opened');
+		$accordionPanelsContainer.append($activeVisiblePanelItem);
+	});
+
+	$('.portfolio-slider-section__prev-btn--mobile').click(function(e) {
+		portfolioSliderMobile.slidePrev();
+	});
+
+	$('.portfolio-slider-section__next-btn--mobile').click(function(e) {
+		portfolioSliderMobile.slideNext();
 	});
 });

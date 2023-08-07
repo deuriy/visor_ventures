@@ -68,6 +68,11 @@
 			grid-template-columns 100%
 	
 	&__item
+		.wpcf7-not-valid-tip
+			margin-top 10px
+			font-weight 500
+			color #A70B0B
+			
 		&--2col
 			@media $xxsPlus
 				grid-column span 2
@@ -76,9 +81,34 @@
 		margin-bottom 7px
 	
 	&__actions
+		position relative
 		display grid
 		grid-template-columns 100%
 		margin-top 40px
 		
 		@media $smMinus
 			margin-top 30px
+		
+		.wpcf7-spinner
+			position absolute
+			top 0
+			right 0
+			bottom 0
+			margin auto 17px
+			background #FFF
+			
+			&::before
+				background #000
+	
+	&__submit-btn
+		@media $xs
+			min-height 55px
+	
+	&.wpcf7-form
+		.wpcf7-response-output
+			margin 1.7em 0 0
+			padding 0.8em 1em
+		
+		&.invalid
+			.wpcf7-response-output
+				border-color #A70B0B
