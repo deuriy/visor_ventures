@@ -26,7 +26,7 @@ $(() => {
 	$('.upload-file__input').each(function(index, el) {
 		let $fileBtn = $(el).next().find('.upload-file__btn');
 
-    $(this).on('change', function (e) {
+    $(el).on('change', function (e) {
       let countFiles = '';
       if (this.files && this.files.length >= 1)
         countFiles = this.files.length;

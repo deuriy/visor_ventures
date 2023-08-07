@@ -40,16 +40,14 @@
           .investment-form__item.investment-form__item--2col
             label(for="linkedin_profile_url").form-label.investment-form__label Your LinkedIn Profile URL#[sup.red *]
             input(type="text" name="linkedin_profile_url" id="linkedin_profile_url" required).form-text.investment-form__form-text
-            //- input(type="file" multiple)
           .investment-form__item.investment-form__item--2col
             label(for="additional_materials").form-label.investment-form__label.investment-form__label--upload-file If you have additional materials to help us make a better decision, please upload them here
             .upload-file
               input(type="file" name="additional_materials" id="additional_materials" multiple).upload-file__input
               .upload-file__wrapper
-                label(for="additional_materials").upload-file__btn Upload Files
+                label(for="additional_materials").btn-default.btn-default--upload.upload-file__btn Upload Files
                 .upload-file__note
                   p Max. file size: 300mb
                   p This could include a pitch deck or other supporting documents.
-              //- .upload-file__result
         .investment-form__actions
           button(type="submit").btn-danger.investment-form__submit-btn Submit
