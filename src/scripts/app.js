@@ -24,7 +24,8 @@ $(() => {
 
 	// File input styling
 	$('.upload-file__input').each(function(index, el) {
-		let $fileBtn = $(el).next().find('.upload-file__btn');
+		let $fileContainer = $(el).closest('.upload-file');
+		let $fileBtn = $fileContainer.find('.upload-file__btn');
 
     $(el).on('change', function (e) {
       let countFiles = '';
