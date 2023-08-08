@@ -1,4 +1,5 @@
 .client-accordion-panel
+	position relative
 	display grid
 	grid-template-columns auto auto
 	overflow hidden
@@ -109,19 +110,19 @@
 		@media $xs
 			order -1
 	
-	&--opened
-		position relative
-		
+	&--opened		
 		.client-accordion-panel__short
 			width 0
 			
 		.client-accordion-panel__full
-			position absolute
-			top 0
-			right 0
-			bottom 0
 			// justify-content end
 			width 780px
+			
+			@media $md
+				position absolute
+				top 0
+				right 0
+				bottom 0
 			
 			@media $mdMinus
 				width 560px
