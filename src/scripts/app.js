@@ -35,7 +35,7 @@ $(() => {
       if (countFiles)
         $fileBtn.text('Selected files: ' + countFiles);
       else
-        $fileBtn.text('Upload Files');;
+        $fileBtn.text('Upload Files');
     });
 	});
 
