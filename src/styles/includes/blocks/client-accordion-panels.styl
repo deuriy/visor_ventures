@@ -1,8 +1,29 @@
 .client-accordion-panels
-	display grid
-	grid-template-columns 1fr repeat(3, auto)
-	gap 30px
+	// display grid
+	// grid-template-columns 1fr repeat(3, auto)
+	// gap 30px
+	display flex
+	// justify-content stretch
 	
-	&__item
-		&:nth-child(n+5)
-			display none
+	// @media $mdMinus
+	// 	justify-content center
+	
+	&__item		
+		&:not(.client-accordion-panel--closed) + .client-accordion-panels__item
+			margin-left 30px
+			
+		// &--invisible
+		// 	width 0
+		// 	visibility hidden
+		// 	opacity 1
+		// 	margin-left 0 !important
+			// @extend .transition
+			// display none
+	
+	// &--loading
+	// 	.client-accordion-panels__item
+	// 		&:nth-child(n+7)
+	// 			width 0
+	// 			visibility hidden
+	// 			opacity 1
+	// 			margin-left 0 !important
