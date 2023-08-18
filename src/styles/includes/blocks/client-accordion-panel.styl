@@ -7,6 +7,9 @@
 	overflow hidden
 	@extend .transition
 	
+	@media $md
+		width 100px
+	
 	// @media $smMinus
 	// 	grid-template-columns 100%
 	
@@ -117,6 +120,11 @@
 		@media $xs
 			order -1
 	
+	&--opened,
+	&--opening
+		@media $md
+			width calc(100% - 390px)
+	
 	&--opened
 		width 780px
 		
@@ -166,3 +174,72 @@
 	// 	top 0
 	// 	right 0
 	// 	bottom 0
+
+
+.no-transition {
+	transition: none !important;
+}
+.no-transition + .client-accordion-panels__item {
+	transition: none !important;
+}
+
+.client-accordion-panels__item {
+	background-color: #181818;
+}
+
+.client-accordion-panel--opening {
+	transition: none;
+	margin-left: 0 !important;
+}
+.client-accordion-panel--opening + .client-accordion-panel--opened {
+	margin-left: 0 !important;
+	position: absolute;
+	right: 260px;
+	top: 0;
+	width: 100px;
+}
+.client-accordion-panel--opening + .client-accordion-panel--opened .client-accordion-panel__short {
+	width: 100px;
+	transition: width 300ms ease-out;
+}
+.client-accordion-panel--opening + .client-accordion-panel--opened .client-accordion-panel__full {
+	width: 0;
+	transition: width 300ms ease-out;
+}
+.client-accordion-panel--opening + .client-accordion-panel--opened + .client-accordion-panels__item {
+	margin-left: 160px;
+	transition: margin-left 300ms ease-out;
+}
+
+.client-accordion-panels {
+	position: relative;
+	display: flex;
+	gap: 0;
+}
+.client-accordion-panel {
+	// width: 100px;
+	margin-left: 30px;
+	transition: width ease-out 500ms, margin-left ease-out 500ms;
+}
+// .client-accordion-panel--opened,
+// .client-accordion-panel--opening
+// {
+// 	width: calc(100% - 390px);
+// }
+.client-accordion-panel--closed {
+	width: 0;
+	margin-left: 0;
+}
+.client-accordion-panel--opened {
+	margin-left: 0;
+}
+.client-accordion-panel--closed:first-child ~ .client-accordion-panels__item:nth-child(5),
+.client-accordion-panel--closed:first-child + .client-accordion-panel--closed ~ .client-accordion-panels__item:nth-child(6),
+.client-accordion-panel--closed:first-child + .client-accordion-panel--closed + .client-accordion-panel--closed ~ .client-accordion-panels__item:nth-child(7)
+{
+	width: 100px;
+}
+.client-accordion-panels__item:nth-child(n+5) {
+	width: 0;
+	margin-left: 0;
+}

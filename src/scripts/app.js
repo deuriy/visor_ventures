@@ -74,46 +74,88 @@ $(() => {
 	});
 
 	$('.portfolio-slider-section__prev-btn--desktop').click(function(event) {
-		if (accordionPanelTimer) return;
+		// if (accordionPanelTimer) return;
 
-		let $currentPortfolioSection = $(this).closest('.portfolio-slider-section');
-		let $accordionPanelsContainer = $currentPortfolioSection.find('.client-accordion-panels');
-		let $activeVisiblePanelItem = $currentPortfolioSection.find('.client-accordion-panels .client-accordion-panels__item:first-child');
-		let $prevPanelItem = $currentPortfolioSection.find('.client-accordion-panels .client-accordion-panels__item:last-child');
+		// let $currentPortfolioSection = $(this).closest('.portfolio-slider-section');
+		// let $accordionPanelsContainer = $currentPortfolioSection.find('.client-accordion-panels');
+		// let $activeVisiblePanelItem = $currentPortfolioSection.find('.client-accordion-panels .client-accordion-panels__item:first-child');
+		// let $prevPanelItem = $currentPortfolioSection.find('.client-accordion-panels .client-accordion-panels__item:last-child');
 
-		$activeVisiblePanelItem.removeClass('client-accordion-panel--opened');
-		$prevPanelItem.addClass('client-accordion-panel--opened');
+		// $activeVisiblePanelItem.removeClass('client-accordion-panel--opened');
 		// $prevPanelItem.addClass('client-accordion-panel--opened');
-		$accordionPanelsContainer.prepend($prevPanelItem);
+		// // $prevPanelItem.addClass('client-accordion-panel--opened');
+		// $accordionPanelsContainer.prepend($prevPanelItem);
 
-		$accordionPanelsContainer.find('.client-accordion-panels__item:first-child').removeClass('client-accordion-panel--invisible');
-		$accordionPanelsContainer.find('.client-accordion-panels__item:nth-child(5)').addClass('client-accordion-panel--invisible');
+		// $accordionPanelsContainer.find('.client-accordion-panels__item:first-child').removeClass('client-accordion-panel--invisible');
+		// $accordionPanelsContainer.find('.client-accordion-panels__item:nth-child(5)').addClass('client-accordion-panel--invisible');
+
+		if(accordionPanelTimer) return;
+
+		let $currentPortfolioSection = $(this).closest(".portfolio-slider-section");
+		let $accordionPanelsContainer = $currentPortfolioSection.find(".client-accordion-panels");
+		let $activeVisiblePanelItem = $currentPortfolioSection.find(".client-accordion-panels .client-accordion-panels__item:first-child");
+		let $prevPanelItem = $currentPortfolioSection.find(".client-accordion-panels .client-accordion-panels__item:last-child");
+		
+		$accordionPanelsContainer.prepend($prevPanelItem);
+		$accordionPanelsContainer.find(".client-accordion-panels__item:first-child")
+			.removeClass("client-accordion-panel--invisible")
+			.addClass('client-accordion-panel--opening')
+			.addClass('client-accordion-panel--opened');
+		
+		$accordionPanelsContainer.find(".client-accordion-panels__item:nth-child(5)")
+				.addClass("client-accordion-panel--invisible");
+			
+		accordionPanelTimer = setTimeout(() => {
+			
+		$activeVisiblePanelItem.addClass('no-transition').removeClass("client-accordion-panel--opened");
+			setTimeout ( () => {$activeVisiblePanelItem.removeClass('no-transition');}, 100);
+			$accordionPanelsContainer.find(".client-accordion-panels__item:first-child").removeClass('client-accordion-panel--opening');
+			accordionPanelTimer=null
+		}, 1000)
 	});
 
 	$('.portfolio-slider-section__next-btn--desktop').click(function(event) {
-		if (accordionPanelTimer) return;
+		// if (accordionPanelTimer) return;
 		
-		let $currentPortfolioSection = $(this).closest('.portfolio-slider-section');
-		let $accordionPanelsContainer = $currentPortfolioSection.find('.client-accordion-panels');
-		let $activeVisiblePanelItem = $currentPortfolioSection.find('.client-accordion-panels .client-accordion-panels__item:first-child');
+		// let $currentPortfolioSection = $(this).closest('.portfolio-slider-section');
+		// let $accordionPanelsContainer = $currentPortfolioSection.find('.client-accordion-panels');
+		// let $activeVisiblePanelItem = $currentPortfolioSection.find('.client-accordion-panels .client-accordion-panels__item:first-child');
+		// let $nextPanelItem = $activeVisiblePanelItem.next();
+
+		// // $accordionPanelsContainer.addClass('client-accordion-panels--loading');
+		// $activeVisiblePanelItem.removeClass('client-accordion-panel--opened').addClass('client-accordion-panel--closed');
+		// $nextPanelItem.addClass('client-accordion-panel--opened');
+		// $accordionPanelsContainer.find('.client-accordion-panels__item:nth-child(5)').removeClass('client-accordion-panel--invisible');
+		// // $nextPanelItem.next().removeClass('client-accordion-panel--invisible');
+		// // $accordionPanelsContainer.append($activeVisiblePanelItem.clone());
+
+		// accordionPanelTimer = setTimeout(() => {
+		// 	$activeVisiblePanelItem.addClass('client-accordion-panel--invisible');
+		// 	$accordionPanelsContainer.append($activeVisiblePanelItem);
+		// 	// $accordionPanelsContainer.find('.client-accordion-panels__item:last-child').removeCl;
+		// 	// $accordionPanelsContainer.removeClass('client-accordion-panels--loading');
+		// 	// $accordionPanelsContainer.find(`.client-accordion-panels:nth-child(n+5)`).addClass('hidden');
+		// 	$activeVisiblePanelItem.removeClass('client-accordion-panel--closed');
+		// 	accordionPanelTimer = null;
+		// }, 1000);
+
+		if(accordionPanelTimer) return;
+
+		let $currentPortfolioSection = $(this).closest(".portfolio-slider-section");
+		let $accordionPanelsContainer = $currentPortfolioSection.find(".client-accordion-panels");
+		let $activeVisiblePanelItem = $currentPortfolioSection.find(".client-accordion-panels .client-accordion-panels__item:first-child");
 		let $nextPanelItem = $activeVisiblePanelItem.next();
-
-		// $accordionPanelsContainer.addClass('client-accordion-panels--loading');
-		$activeVisiblePanelItem.removeClass('client-accordion-panel--opened').addClass('client-accordion-panel--closed');
-		$nextPanelItem.addClass('client-accordion-panel--opened');
-		$accordionPanelsContainer.find('.client-accordion-panels__item:nth-child(5)').removeClass('client-accordion-panel--invisible');
-		// $nextPanelItem.next().removeClass('client-accordion-panel--invisible');
-		// $accordionPanelsContainer.append($activeVisiblePanelItem.clone());
-
+		
+		$activeVisiblePanelItem.removeClass("client-accordion-panel--opened").addClass("client-accordion-panel--closed");
+		$nextPanelItem.addClass("client-accordion-panel--opened");
+		$accordionPanelsContainer.find(".client-accordion-panels__item:nth-child(5)").removeClass("client-accordion-panel--invisible");
+		
 		accordionPanelTimer = setTimeout(() => {
-			$activeVisiblePanelItem.addClass('client-accordion-panel--invisible');
+			$activeVisiblePanelItem.addClass("client-accordion-panel--invisible");
 			$accordionPanelsContainer.append($activeVisiblePanelItem);
-			// $accordionPanelsContainer.find('.client-accordion-panels__item:last-child').removeCl;
-			// $accordionPanelsContainer.removeClass('client-accordion-panels--loading');
-			// $accordionPanelsContainer.find(`.client-accordion-panels:nth-child(n+5)`).addClass('hidden');
-			$activeVisiblePanelItem.removeClass('client-accordion-panel--closed');
-			accordionPanelTimer = null;
-		}, 1000);
+			$activeVisiblePanelItem.removeClass("client-accordion-panel--closed");
+			accordionPanelTimer = null
+		}, 1000)
 	});
 
 	$('.portfolio-slider-section__prev-btn--mobile').click(function(e) {
