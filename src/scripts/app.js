@@ -43,7 +43,7 @@ $(() => {
 	  allowTouchMove: false,
 	  modules: [Navigation],
 	  slidesPerView: 1,
-	  // spaceBetween: 30,
+	  spaceBetween: 30,
 	  loop: true
 	});
 
