@@ -40,7 +40,7 @@ $(() => {
 	});
 
 	const portfolioSliderMobile = new Swiper('.portfolio-slider--mobile', {
-	  allowTouchMove: false,
+	  // allowTouchMove: false,
 	  modules: [Navigation],
 	  slidesPerView: 1,
 	  spaceBetween: 30,
@@ -104,13 +104,20 @@ $(() => {
 		
 		$accordionPanelsContainer.find(".client-accordion-panels__item:nth-child(5)")
 				.addClass("client-accordion-panel--invisible");
+
+		$accordionPanelsContainer.addClass('client-accordion-panels--grid');
 			
 		accordionPanelTimer = setTimeout(() => {
-			
-		$activeVisiblePanelItem.addClass('no-transition').removeClass("client-accordion-panel--opened");
-			setTimeout ( () => {$activeVisiblePanelItem.removeClass('no-transition');}, 100);
+
+			$accordionPanelsContainer.removeClass('client-accordion-panels--grid');
+			$activeVisiblePanelItem.addClass('no-transition').removeClass("client-accordion-panel--opened");
+
+			setTimeout ( () => {
+				$activeVisiblePanelItem.removeClass('no-transition');
+			}, 100);
+
 			$accordionPanelsContainer.find(".client-accordion-panels__item:first-child").removeClass('client-accordion-panel--opening');
-			accordionPanelTimer=null
+			accordionPanelTimer = null;
 		}, 1000)
 	});
 
